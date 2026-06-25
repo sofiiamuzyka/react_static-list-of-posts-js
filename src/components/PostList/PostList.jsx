@@ -2,12 +2,10 @@
 // import { CommentList } from '../CommentList/CommentList';
 import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList = ({ posts, comments }) => (
+export const PostList = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
-      <div key={post.id}>
-        <PostInfo post={post} comments={comments} />
-      </div>
+      <PostInfo post={post} key={post.id} />
     ))}
   </div>
 );
